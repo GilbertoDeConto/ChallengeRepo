@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Nunito Sans', sans-serif !important;
+    color: hsl(200, 15, 8);
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+body{
+   background-color:  hsl(0, 0%, 98%);
+}
+h3{
+    margin-left: 95px;
+}
+input{
+    margin-right: 141px;
+}

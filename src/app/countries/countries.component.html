@@ -1,0 +1,27 @@
+<div >
+  <nav class="navbar">
+    <input class="shadow-sm p-3 mb-5 bg-white rounded" type="text" name="search" placeholder="Type the country" [(ngModel)]="filter">
+
+    <select id="region" class="shadow-sm p-3 mb-5 bg-white rounded" placeholder="Filter By Region" [(ngModel)]="filtro">
+        <option value="" disabled selected>Filter By Region</option>
+        <option value="africa">Africa</option>
+        <option value="america">Americas</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europe</option>
+        <option value="oceania">Oceania</option>
+    </select>
+  </nav>
+
+  <div class="table">
+    <div class="card" style="width: 15rem; height: 20rem;" *ngFor="let country of countries | filter:filtro | filter:filter; let i = index" routerLink="/country/{{country.name}}">
+      <img src={{country.flag}} class="card-img-top" width=200 height=150>
+      <div class="card-body">
+        <h5 class="card-title"><b>{{country.name}}</b></h5>
+        <br>
+        <span class="card-text"><b>Population: </b>{{country.population}}</span><br>
+        <span class="card-text"><b>Region: </b>{{country.region}}</span><br>
+        <span class="card-text"><b>Capital: </b>{{country.capital}}</span><br>
+      </div>
+  </div>
+
+</div>

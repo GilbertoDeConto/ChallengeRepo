@@ -1,0 +1,36 @@
+<div *ngIf="country">
+    <input type="button" value="Back" class="btn btn-light">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <img src={{country[0].flag}} width=450 height=350>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-9">
+                <h2><b>{{country[0].name}}</b></h2><br>
+            </div>
+            
+            <div class="row">
+                <div class="col-8 col-sm-6">
+                    <p><b>Native Name:</b> {{country[0].nativeName}}</p>
+                    <p><b>Population:</b> {{country[0].population}}</p>
+                    <p><b>Region:</b> {{country[0].region}}</p>
+                    <p><b>Sub-Region:</b> {{country[0].subregion}}</p>
+                    <p><b>Capital:</b> {{country[0].capital}}</p>
+                </div>
+                <div class="col-4 col-sm-6 right">
+                    <p><b>Top Level Domain:</b> {{country[0].topLevelDomain[0]}}</p>
+                    <p *ngFor="let c of country[0].currencies"><b>Currencies:</b> {{c.name}}</p>
+                    <p *ngFor="let l of country[0].languages"><b>Languages:</b> {{l.name}}</p>
+                </div>        
+            </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+</div>
